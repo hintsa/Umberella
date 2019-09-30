@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D8E0F0"
+    android:orientation="vertical"
+    tools:context=".view.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_current_weather"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000">
+
+        <TextView
+            android:id="@+id/tv_locale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:textColor="#ffffff"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_current_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textColor="#ffffff"
+            android:textSize="35sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_locale" />
+
+        <TextView
+            android:id="@+id/tv_weather_cond"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_current_temp" />
+
+        <ImageView
+            android:id="@+id/iv_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/icons8settings48"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_today"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Today"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:textSize="30sp"/>
+        <TextView
+            android:id="@+id/tvItemTime1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="60dp"
+            android:text="4:00PM" />
+
+        <TextView
+            android:id="@+id/tvItemTime2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tvItemTime1"
+            android:paddingLeft="50dp"
+            android:layout_marginTop="60dp"
+            android:text="4:00PM" />
+
+        <TextView
+            android:id="@+id/tvItemTime3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="40dp"
+            android:layout_toLeftOf="@id/tvItemTime4"
+            android:paddingRight="10dp"
+            android:text="4:00PM" />
+
+        <TextView
+            android:id="@+id/tvItemTime4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="30dp"
+            android:layout_marginTop="60dp"
+            android:layout_alignParentRight="true"
+            android:text="4:00PM" />
+
+        <ImageView
+        android:id="@+id/ivItemIcon1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvItemTime1"
+        android:src="@drawable/ten_night"/>
+
+        <ImageView
+            android:id="@+id/ivItemIcon2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvItemTime2"
+            android:layout_toRightOf="@id/ivItemIcon1"
+            android:src="@drawable/ten_night" />
+
+        <ImageView
+            android:id="@+id/ivItemIcon3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvItemTime3"
+            android:layout_toRightOf="@id/ivItemIcon2"
+            android:src="@drawable/ten_night" />
+
+        <ImageView
+            android:id="@+id/ivItemIcon4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvItemTime4"
+            android:layout_toRightOf="@id/ivItemIcon3"
+            android:src="@drawable/ten_night" />
+
+        <TextView
+            android:id="@+id/tvItemTemp1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivItemIcon1"
+            android:layout_marginLeft="35dp"
+            android:text="100" />
+
+        <TextView
+            android:id="@+id/tvItemTemp2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivItemIcon1"
+            android:layout_toRightOf="@id/tvItemTime1"
+            android:paddingLeft="65dp"
+            android:text="100"/>
+
+        <TextView
+            android:id="@+id/tvItemTemp3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivItemIcon1"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="30dp"
+            android:layout_toLeftOf="@id/tvItemTime4"
+            android:paddingRight="40dp"
+            android:text="100" />
+
+        <TextView
+            android:id="@+id/tvItemTemp4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivItemIcon1"
+            android:layout_toRightOf="@id/tvItemTime3"
+            android:layout_marginLeft="10dp"
+            android:text="100"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
